@@ -1,0 +1,13 @@
+- name: My First Playbook
+  hosts: all
+  tasks:
+    - name: Write a file
+      file:
+        state: touch
+        path: "/tmp/i_was_here"
+
+    - name: Install htop
+      apt:
+        name: htop
+        state: latest
+      become: yes
