@@ -6,14 +6,16 @@
         state: touch
         path: "/tmp/i_was_here"
 
-    - name: Install htop
+    - name: Install htop on Debian devices
       apt:
         name: htop
         state: latest
-      become: yes
+      become: true
+      when: ansible_facts['os_family'] == "Debian"
 
     - name: Install cmatrix
       apt:
         name: cmatrix
         state: latest
-      become: yes
+      become: true
+      when: ansible_facts['os_family'] == "Debian"
