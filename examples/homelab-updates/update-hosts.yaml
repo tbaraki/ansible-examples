@@ -1,11 +1,20 @@
 - name: Update Hosts
-  hosts: debian
-  become: yes
+  hosts: all
+  become: true
+
   tasks:
     - name: Update apt cache
       apt:
         update_cache: yes
+      when: ansible_facts["os_family"] == "Debian"
 
     - name: Upgrade packages
       apt:
-        upgrade: dist
+        upgrade: full
+      when: ansible_facts["os_family"] == "Debian"
+
+    - name: Update dnf packages
+      dnf:
+        name: "*"
+        state: latest
+      when: ansible_facts["os_family"] == "RedHat"

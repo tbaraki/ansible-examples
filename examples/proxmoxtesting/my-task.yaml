@@ -11,3 +11,9 @@
         name: htop
         state: latest
       become: yes
+
+    - name: Install cmatrix
+      apt:
+        name: cmatrix
+        state: latest
+      become: yes
