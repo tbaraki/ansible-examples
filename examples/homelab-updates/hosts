@@ -1,10 +1,10 @@
 [debian]
-micro01.baraki.app
-microlab01.baraki.app
-pihole.baraki.app
-10.0.10.74
-10.0.10.93
-10.0.10.206
+micro01.baraki.app ansible_become_pass="{{ sudo_pwd }}"
+microlab01.baraki.app ansible_become_pass="{{ sudo_pwd }}"
+pihole.baraki.app ansible_become_pass="{{ sudo_pwd }}"
+10.0.10.74 ansible_become_pass="{{ sudo_pwd }}"
+10.0.10.93 ansible_become_pass="{{ sudo_pwd }}"
+10.0.10.206 ansible_become_pass="{{ sudo_pwd }}"
 
 [redhat]
-10.0.10.55
+10.0.10.55 ansible_become_pass="{{ sudo_pwd }}"

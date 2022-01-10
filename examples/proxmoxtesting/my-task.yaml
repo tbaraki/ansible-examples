@@ -1,5 +1,10 @@
+---
 - name: My First Playbook
   hosts: all
+
+  vars_files:
+    - "vars/sudo_pwd.yaml"
+
   tasks:
     - name: Write a file
       file:

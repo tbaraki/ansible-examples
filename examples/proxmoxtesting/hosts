@@ -1,7 +1,7 @@
 [debian]
-10.0.10.74
-10.0.10.93
-10.0.10.206
+10.0.10.74 ansible_become_pass="{{ sudo_pwd }}"
+10.0.10.93 ansible_become_pass="{{ sudo_pwd }}"
+10.0.10.206 ansible_become_pass="{{ sudo_pwd }}"
 
 [redhat]
-10.0.10.55
+10.0.10.55 ansible_become_pass="{{ sudo_pwd }}"

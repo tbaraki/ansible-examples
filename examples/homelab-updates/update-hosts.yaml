@@ -1,6 +1,10 @@
+---
 - name: Update Hosts
   hosts: all
   become: true
+
+  vars_files:
+    - "vars/sudo_pwd.yaml"      
 
   tasks:
     - name: Update apt cache
