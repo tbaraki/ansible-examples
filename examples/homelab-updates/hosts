@@ -1,5 +1,0 @@
-[debian]
-micro01.baraki.app ansible_become_pass="{{ sudo_pwd }}"
-microlab01.baraki.app ansible_become_pass="{{ sudo_pwd }}"
-pihole.baraki.app ansible_become_pass="{{ sudo_pwd }}"
-kube0[1:3] ansible_become_pass="{{ sudo_pwd }}"
