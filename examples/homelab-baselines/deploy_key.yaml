@@ -1,0 +1,15 @@
+---
+- name: Deploy SSH Key
+  hosts: all
+  become: true
+
+  vars_files:
+    - "vars/sudo_pwd.yaml"      
+
+  tasks:
+  - name: Ensure SSH key is present
+    ansible.posix.authorized_key:
+      user: "travis"
+      state: present
+      key: "{{ lookup('file', '/home/travis/.ssh/id_ed25519_sk.pub') }}"
+
